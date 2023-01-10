@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20230111 00:00:36.096" rpa="false" schemaversion="3">
+<suite id="s1" name="Script" source="S:\Automation_Testing\icp\script.robot">
+<test id="s1-t1" name="verify if the homepage is reachable" line="7">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>https://icp.edu.pk</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230111 00:00:36.512" level="INFO">Opening browser 'chrome' to base url 'https://icp.edu.pk'.</msg>
+<status status="PASS" starttime="20230111 00:00:36.511" endtime="20230111 00:01:04.483"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230111 00:01:04.484" endtime="20230111 00:01:04.629"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Islamia College Peshawar</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230111 00:01:04.630" endtime="20230111 00:01:04.666"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230111 00:01:04.666" endtime="20230111 00:01:06.878"/>
+</kw>
+<status status="PASS" starttime="20230111 00:00:36.510" endtime="20230111 00:01:06.880"/>
+</test>
+<test id="s1-t2" name="verify if search function is working" line="13">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>https://icp.edu.pk</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230111 00:01:06.895" level="INFO">Opening browser 'chrome' to base url 'https://icp.edu.pk'.</msg>
+<status status="PASS" starttime="20230111 00:01:06.889" endtime="20230111 00:02:12.115"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230111 00:02:12.116" endtime="20230111 00:02:12.259"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Islamia College Peshawar</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230111 00:02:12.260" endtime="20230111 00:02:12.287"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>css=#gsc-i-id1</arg>
+<arg>jobs</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230111 00:02:12.290" level="INFO">Typing text 'jobs' into text field 'css=#gsc-i-id1'.</msg>
+<status status="PASS" starttime="20230111 00:02:12.289" endtime="20230111 00:02:12.438"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>css=#gsc-i-id1</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230111 00:02:12.440" level="INFO">Sending key(s) ('ENTER',) to css=#gsc-i-id1 element.</msg>
+<msg timestamp="20230111 00:02:12.732" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20230111 00:02:12.733" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230111 00:02:12.439" endtime="20230111 00:02:15.614"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Sort by:</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230111 00:02:15.615" endtime="20230111 00:02:15.642"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230111 00:02:15.643" endtime="20230111 00:02:17.853"/>
+</kw>
+<status status="PASS" starttime="20230111 00:01:06.886" endtime="20230111 00:02:17.855"/>
+</test>
+<status status="PASS" starttime="20230111 00:00:36.099" endtime="20230111 00:02:17.861"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Script">Script</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
