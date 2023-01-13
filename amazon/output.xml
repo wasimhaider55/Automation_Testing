@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20230111 22:02:38.916" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon" source="S:\Automation_Testing\amazon\amazon.robot">
+<test id="s1-t1" name="user must be signed in before checkout" line="6">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>http://www.amazon.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230111 22:02:40.983" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com'.</msg>
+<status status="PASS" starttime="20230111 22:02:40.980" endtime="20230111 22:02:56.217"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230111 22:02:56.249" endtime="20230111 22:02:57.483"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>Today's Deals</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230111 22:02:57.508" endtime="20230111 22:02:57.942"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>Today's Deals</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230111 22:02:58.210" level="INFO">Current page contains text 'Today's Deals'.</msg>
+<status status="PASS" starttime="20230111 22:02:57.943" endtime="20230111 22:02:58.211"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>css=#twotabsearchtextbox</arg>
+<arg>playstation 5 controller</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230111 22:02:58.217" level="INFO">Typing text 'playstation 5 controller' into text field 'css=#twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20230111 22:02:58.216" endtime="20230111 22:02:59.219"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>css=#twotabsearchtextbox</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230111 22:02:59.222" level="INFO">Sending key(s) ('ENTER',) to css=#twotabsearchtextbox element.</msg>
+<msg timestamp="20230111 22:02:59.687" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20230111 22:02:59.687" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20230111 22:02:59.221" endtime="20230111 22:03:28.079"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>results for "playstation 5 controller"</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230111 22:03:28.080" endtime="20230111 22:03:28.345"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>results for "playstation 5 controller"</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230111 22:03:28.569" level="INFO">Current page contains text 'results for "playstation 5 controller"'.</msg>
+<status status="PASS" starttime="20230111 22:03:28.366" endtime="20230111 22:03:28.570"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>css=[data-component-id='9'] img.s-image</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230111 22:03:28.572" level="INFO">Clicking element 'css=[data-component-id='9'] img.s-image'.</msg>
+<status status="PASS" starttime="20230111 22:03:28.571" endtime="20230111 22:03:40.471"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>css=.a-button-inner #add-to-cart-button</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20230111 22:03:45.832" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230111 22:03:45.832" level="FAIL">Text 'css=.a-button-inner #add-to-cart-button' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20230111 22:03:40.474" endtime="20230111 22:03:45.838"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>css=.a-button-inner #add-to-cart-button</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230111 22:03:45.839" endtime="20230111 22:03:45.839"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>css=.a-button-inner #add-to-cart-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230111 22:03:45.840" endtime="20230111 22:03:45.840"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230111 22:03:45.841" endtime="20230111 22:03:45.841"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>Added to Cart</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230111 22:03:45.842" endtime="20230111 22:03:45.842"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20230111 22:03:45.844" endtime="20230111 22:03:45.844"/>
+</kw>
+<tag>Smoke</tag>
+<status status="FAIL" starttime="20230111 22:02:40.968" endtime="20230111 22:03:45.845">Text 'css=.a-button-inner #add-to-cart-button' did not appear in 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20230111 22:02:38.924" endtime="20230111 22:03:45.850"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Amazon">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
